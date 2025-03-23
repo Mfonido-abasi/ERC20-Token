@@ -2,9 +2,8 @@ const hre = require("hardhat");
 
 async function main() {
   const MyToken = await hre.ethers.getContractFactory("MyToken");
-  const myToken = await MyToken.deploy(); // No need to call .deployed()
-
-  console.log("MyToken deployed to:", await myToken.getAddress()); // Correct way to get the address
+  const myToken = await MyToken.deploy(); 
+  console.log("MyToken deployed to:", await myToken.getAddress()); 
 }
 
 main()
